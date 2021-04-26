@@ -5,7 +5,6 @@ class Employee {
         this.id = id;
         this.email = `${firstName}.${lastName}@company.com`;
         this.role = 'Employee';
-        this.icon = 'fas fa-briefcase'
     };
 
     getName() {
@@ -25,9 +24,6 @@ class Employee {
         return this.role;
     };
     
-    getIcon() {
-        return `<i class="${this.icon} fa-3x"></i>`
-    };
 };
 
 module.exports = Employee;
