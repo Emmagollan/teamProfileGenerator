@@ -9,7 +9,7 @@ const questions = [
         type: 'list',
         name: 'role',
         message: 'What is the employee\'s role?',
-        choices: // function to allow only one manager to be created
+        choices: // only one manager can be created
             () => {
             if (allEmployees.some(employee => employee.role === 'Manager')) {
                 return ['Engineer', 'Intern']    
@@ -109,7 +109,7 @@ const promptUser = () => {
     return inquirer.prompt(questions)
     .then(userResponse => {
 
-        // adds to employee data array
+        // push to employee data array
         allEmployees.push(userResponse);
 
         // adds another employee based on user selection

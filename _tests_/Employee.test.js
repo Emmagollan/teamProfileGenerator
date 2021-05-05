@@ -1,29 +1,16 @@
-const Employee = require ('../lib/Employee');
-const { expectToBe, expectStr, expectNum } = require('../utils/expect');
+const { TestScheduler } = require('jest');
+const Employee = require('../lib/Employee');
+const employee = new Employee('Emma', 1, 'emmagollan33@gmail.com');
 
-const employee = new Employee('Jemma', 'Smith', 1);
-
-test('creates a employee object', () => {
-    expectToBe(employee.firstName,'Jemma');
-    expectToBe(employee.lastName, 'Smith');
-    expectNum(employee.id);
-    expectStr(employee.email, '@');
-    expectToBe(employee.role, 'Employee');
+test('Check to see if employee object was created successfully.', () => {
+  expect(employee).toEqual(expect.any(Employee));
 });
-
-test('gets employee\'s name', () => {
-    expectStr(employee.getName(), `${employee.firstName} ${employee.lastName}`);
+test('Check to see if employee name is a string.', () => {
+  expect(employee.name).toEqual(expect.any(String));
 });
-
-test('gets employee\'s ID', () => {
-    expectStr(employee.getId(), `${employee.id}`);
+test('Check to see if employee id is a number.', () => {
+  expect(employee.id).toEqual(expect.any(Number));
 });
-
-test('gets employee\'s email', () => {
-    expectStr(employee.getEmail(), employee.email);
+test('Check to see if employee email is a string.', () => {
+  expect(employee.email).toEqual(expect.any(String));
 });
-
-test('gets employee\'s role', () => {
-    expectStr(employee.getRole(), employee.role);
-});
-
