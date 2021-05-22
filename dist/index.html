@@ -1,9 +1,4 @@
-class generatePage {
-  constructor( data = "" ) {
-    this.data = data;
-  }
-  createData() {
-    return `
+
     <!doctype html>
     <html lang="en">
       <head>
@@ -52,29 +47,67 @@ class generatePage {
         <main class="pt-5">
           <div class="container-fluid">
             <div class="row">
-              ${this.data.map((employee) => {
-              return`
+              
               <div class="col-lg-2 col-md-4 col-sm-12">
               <div class="card">
               <div class="card-header">
-                <span class="employee-name">${employee.getName()}</span>
+                <span class="employee-name"></span>
                 <span class="job-title">
-                ${employee.getOffice ? `<i class="fa fa-coffee" aria-hidden="true"></i>` : employee.github ? `<i class="fas fa-pencil-ruler"></i>` : `<i class="fas fa-graduation-cap"></i>`}
-                 ${employee.getRole()}
+                <i class="fa fa-coffee" aria-hidden="true"></i>
+                 Manager
                  </span>
               </div>
               <div class="card-body">
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item">ID: ${employee.getId()}</li>
-                  <li class="list-group-item">Email: ${employee.getEmail()}</li>
-                  <li class="list-group-item">${employee.getOffice ? `Office Number: ${employee.getOffice()}` : employee.github ? `<a href="https://github.com/${employee.getGitHub()}" rel="noopener" target="_blank"> GitHub: ${employee.getGitHub()} </a>` : `School: ${employee.getSchool()}`} </li>
+                  <li class="list-group-item">ID: 234</li>
+                  <li class="list-group-item">Email: The email</li>
+                  <li class="list-group-item">Office Number: 594 </li>
                 </ul>
               </div>
             </div>
           </div>
           <!--card-->
-              `
-              }).join('')}
+              
+              <div class="col-lg-2 col-md-4 col-sm-12">
+              <div class="card">
+              <div class="card-header">
+                <span class="employee-name">Emma</span>
+                <span class="job-title">
+                <i class="fas fa-pencil-ruler"></i>
+                 Engineer
+                 </span>
+              </div>
+              <div class="card-body">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">ID: 854858</li>
+                  <li class="list-group-item">Email: Emma@email</li>
+                  <li class="list-group-item"><a href="https://github.com/Emmaaaa" rel="noopener" target="_blank"> GitHub: Emmaaaa </a> </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!--card-->
+              
+              <div class="col-lg-2 col-md-4 col-sm-12">
+              <div class="card">
+              <div class="card-header">
+                <span class="employee-name">Millie</span>
+                <span class="job-title">
+                <i class="fas fa-graduation-cap"></i>
+                 Intern
+                 </span>
+              </div>
+              <div class="card-body">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">ID: 84848</li>
+                  <li class="list-group-item">Email: Mili</li>
+                  <li class="list-group-item">School: Uni@uni </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!--card-->
+              
           </div>
         </main>
 
@@ -83,8 +116,4 @@ class generatePage {
 
       </body>
     </html>
-    `
-  }
-
-}
-module.exports = generatePage;
+    
