@@ -17,7 +17,7 @@ npm run test
 # License
 None
 
-[Walk thru video]()
+[Walk thru video](https://drive.google.com/file/d/1LcVVPKq00t-G7BI7fTZWCBzcE6-T4gDG/view)
 
 ## Author
 Emma Gollan
